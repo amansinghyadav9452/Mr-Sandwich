@@ -330,3 +330,44 @@ a,button{transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s ease
 @media(max-width:900px){.nav{padding:12px 0}.navlinks{background:rgba(251,244,230,.98);border:1px solid var(--line);box-shadow:0 20px 45px rgba(45,32,15,.15)}.menu-btn{display:block;background:var(--olive);color:#fff}.hero-shell{border-radius:0}.hero{grid-template-columns:1fr;padding:38px 26px 0}.hero-copy{padding:5px 0 30px}.hero-media{min-height:390px}.burger-image{width:100%;max-height:400px}.annotation{right:2%;top:9%}.fresh-stamp{bottom:8%;right:1%;transform:scale(.8) rotate(8deg)}.stats-bar{grid-template-columns:repeat(3,1fr);padding:18px}.stats-bar>div{padding:10px 8px;border-right:1px solid rgba(255,255,255,.24)}.stats-bar>div:last-of-type{border-right:0}.stats-bar .quote{display:none}.category-grid{grid-template-columns:1fr 1fr}.story-preview-grid{grid-template-columns:1fr;gap:45px}.story-photo{height:390px}.page-cards{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.container{width:calc(100% - 28px)}.brand>span:last-child{font-size:17px}.brand small{font-size:5px}.search-btn{display:none}.hero-wrap{padding-top:78px}.hero{padding:25px 17px 0}.hero-copy{text-align:center}.eyebrow{font-size:9px;letter-spacing:.2em}.hero h1{font-size:clamp(48px,14vw,70px)}.hero-copy>p{font-size:14px;line-height:1.55}.actions{justify-content:center}.feature-row{justify-content:center;gap:18px;margin-top:30px}.feature-row>div{display:grid;grid-template-columns:1fr;justify-items:center;min-width:78px}.feature-icon{margin-bottom:6px}.hero-media{min-height:330px}.hero-media:before{width:340px;height:340px}.burger-image{width:112%;max-height:350px}.annotation{font-size:14px;right:0;top:8%}.fresh-stamp{width:82px;height:82px;font-size:8px;bottom:7%;right:-3%}.stats-bar{border-radius:18px;grid-template-columns:repeat(3,1fr);gap:0;padding:14px 6px}.stats-bar>div{padding:6px 3px;border-right:1px solid rgba(255,255,255,.24)}.stats-bar>div:last-of-type{border-right:0}.stats-bar strong{font-size:19px}.stats-bar span{font-size:8px}.craving-section,.story-preview{padding:75px 0}.section-head{display:block}.section-head h2{font-size:49px;margin-bottom:24px}.outline-link{display:inline-block}.category-grid{grid-template-columns:1fr 1fr;gap:10px}.category-card{height:155px}.category-card span{font-size:14px;left:13px;bottom:13px}.category-card b{left:auto;right:0}.story-photo{height:310px}.story-preview h2{font-size:48px}.story-preview p{font-size:14px}.page-hero{min-height:52vh;padding:125px 0 55px}.page-hero h1{font-size:clamp(55px,15vw,90px)}.page-copy{padding:75px 0}.page-cards{grid-template-columns:1fr}.chaat,.franchise,.contact{padding-top:90px!important}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}.category-card,.story-preview-grid{opacity:1;transform:none}}
+
+/* =========================================================
+   MOBILE STABILITY PATCH — HEADER + CATEGORY ARROWS
+   ========================================================= */
+.home-page .nav{
+  position:sticky;
+  top:0;
+  left:auto;
+  width:100%;
+  z-index:120;
+}
+.home-page .hero-wrap{padding-top:0}
+.home-page .nav-inner{position:relative;z-index:1}
+
+/* Keep the circular arrow inside each category card instead of
+   positioning it relative to the text width. */
+.category-card span{
+  right:18px;
+  padding-right:44px;
+}
+.category-card b{
+  left:auto;
+  right:0;
+}
+
+@media(max-width:600px){
+  .home-page .nav{padding-top:12px;padding-bottom:12px}
+  .category-card span{
+    left:13px;
+    right:13px;
+    bottom:13px;
+    padding-right:40px;
+  }
+  .category-card b{
+    right:0;
+    bottom:0;
+    width:30px;
+    height:30px;
+    font-size:13px;
+  }
+}
