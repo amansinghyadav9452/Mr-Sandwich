@@ -17,6 +17,7 @@
  <body class="home-page">
   <div class="cursor" id="cursor">
   </div>
+  <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
   <header class="nav" id="nav">
    <div class="container nav-inner">
     <a aria-label="Mr. Sandwich home" class="brand" href="index.html">
@@ -816,10 +817,52 @@
   </footer>
   <script>
    (()=>{
-const nav=document.getElementById('nav'), links=document.getElementById('navLinks'), menu=document.getElementById('mobileMenu'), cursor=document.getElementById('cursor'), media=document.getElementById('heroMedia');
-const onScroll=()=>nav.classList.toggle('scrolled',window.scrollY>24); window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
-menu.addEventListener('click',()=>{const open=links.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));});
-links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');menu.setAttribute('aria-expanded','false')}));
+const nav = document.getElementById('nav');
+const links = document.getElementById('navLinks');
+const menu = document.getElementById('mobileMenu');
+const cursor = document.getElementById('cursor');
+const media = document.getElementById('heroMedia');
+
+const onScroll = () => {
+  nav.classList.toggle('scrolled', window.scrollY > 24);
+};
+
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+const mobileBackdrop = document.getElementById('mobileNavBackdrop');
+
+const setMobileNav = (open) => {
+  links?.classList.toggle('open', open);
+  mobileBackdrop?.classList.toggle('open', open);
+  document.body.classList.toggle('nav-drawer-open', open);
+  menu?.setAttribute('aria-expanded', String(open));
+  menu?.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+
+  if (menu) {
+    menu.textContent = open ? '×' : '☰';
+  }
+};
+
+menu?.addEventListener('click', () => {
+  setMobileNav(!links?.classList.contains('open'));
+});
+
+mobileBackdrop?.addEventListener('click', () => {
+  setMobileNav(false);
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    setMobileNav(false);
+  }
+});
+
+links?.querySelectorAll('a').forEach((link) => {
+  link.addEventListener('click', () => {
+    setMobileNav(false);
+  });
+});
 if(matchMedia('(pointer:fine)').matches){window.addEventListener('pointermove',e=>{cursor.style.left=e.clientX+'px';cursor.style.top=e.clientY+'px'; if(media){const r=media.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;media.style.setProperty('--mx',(x*10).toFixed(2)+'px');media.style.setProperty('--my',(y*8).toFixed(2)+'px')}});document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>cursor.classList.add('big'));el.addEventListener('mouseleave',()=>cursor.classList.remove('big'))})}
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.category-card,.story-preview-grid,.stats-bar,.reveal,.whyus-card,.testi-card,.reveal-hero,.reveal-up,.reveal-left,.reveal-right,.reveal-zoom').forEach(x=>io.observe(x));

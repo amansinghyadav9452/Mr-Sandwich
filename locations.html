@@ -72,6 +72,7 @@
  <body>
   <div class="cursor" id="cursor">
   </div>
+  <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
   <header class="nav" id="nav">
    <div class="container nav-inner">
     <a class="logo" href="index.html">
@@ -98,7 +99,7 @@
     <a class="nav-cta" href="locations.html">
      Find / Enquire
     </a>
-    <button class="menu-btn" id="mobileMenu">
+    <button aria-expanded="false" aria-label="Open menu" class="menu-btn" id="mobileMenu" type="button">
      ☰
     </button>
    </div>
@@ -169,7 +170,36 @@ document.querySelectorAll('.reveal').forEach(x=>obs.observe(x));
 const cur=document.getElementById('cursor');
 window.addEventListener('mousemove',e=>{cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px'});
 document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>{cur.style.width='34px';cur.style.height='34px'});el.addEventListener('mouseleave',()=>{cur.style.width='16px';cur.style.height='16px'})});
-document.getElementById('mobileMenu')?.addEventListener('click',()=>document.querySelector('.navlinks').classList.toggle('open'));
+const mobileMenu=document.getElementById('mobileMenu');
+const mobileLinks=document.querySelector('.navlinks');
+const mobileBackdrop=document.getElementById('mobileNavBackdrop');
+
+const setMobileNav=(open)=>{
+  mobileLinks?.classList.toggle('open',open);
+  mobileBackdrop?.classList.toggle('open',open);
+  document.body.classList.toggle('nav-drawer-open',open);
+  mobileMenu?.setAttribute('aria-expanded',String(open));
+  mobileMenu?.setAttribute('aria-label',open?'Close menu':'Open menu');
+  if(mobileMenu){
+    mobileMenu.textContent=open?'×':'☰';
+  }
+};
+
+mobileMenu?.addEventListener('click',()=>{
+  setMobileNav(!mobileLinks?.classList.contains('open'));
+});
+
+mobileBackdrop?.addEventListener('click',()=>setMobileNav(false));
+
+document.addEventListener('keydown',(event)=>{
+  if(event.key==='Escape'){
+    setMobileNav(false);
+  }
+});
+
+mobileLinks?.querySelectorAll('a').forEach((link)=>{
+  link.addEventListener('click',()=>setMobileNav(false));
+});
 document.querySelector('.page-form')?.addEventListener('submit',e=>{e.preventDefault();const b=e.target.querySelector('button');b.textContent='ENQUIRY SENT ✓';setTimeout(()=>{b.textContent='SEND ENQUIRY ↗';e.target.reset()},2200)});
 animate('.page-hero h1',{opacity:[0,1],y:[50,0]},{duration:.8,ease:'easeOut'});
   </script>

@@ -2178,6 +2178,11 @@ h1,h2,h3 {
   width:100%
 }
 
+.hero-shell .container {
+  padding-top:clamp(50px,7vw,90px);
+  padding-bottom:0
+}
+
 .hero {
   display:block;
   max-width:800px
@@ -2883,5 +2888,193 @@ MOBILE STABILITY PATCH — FIXED HEADER + CATEGORY ARROWS
     width: 30px;
     height: 30px;
     font-size: 13px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION + FIXED HEADER HARDENING
+   Keeps the header inside the viewport and uses a real drawer.
+   ========================================================= */
+.nav {
+  position:fixed !important;
+  top:0;
+  left:0;
+  right:0;
+  width:100%;
+  z-index:1000;
+  transform:none !important;
+  will-change:background-color,box-shadow;
+}
+
+.nav-inner {
+  position:relative;
+  width:min(1240px,calc(100% - 44px));
+  min-width:0;
+  margin:0 auto;
+}
+
+.mobile-nav-backdrop {
+  position:fixed;
+  inset:0;
+  z-index:999;
+  background:rgba(10,12,8,.48);
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transition:opacity .28s ease,visibility .28s ease;
+  backdrop-filter:blur(3px);
+}
+
+.mobile-nav-backdrop.open {
+  opacity:1;
+  visibility:visible;
+  pointer-events:auto;
+}
+
+@media (max-width:900px) {
+  .nav {
+    padding:12px 0;
+  }
+
+  .nav-inner {
+    width:calc(100% - 28px);
+    max-width:none;
+    padding:0;
+  }
+
+  .navlinks {
+    position:fixed;
+    top:0;
+    right:0;
+    width:min(86vw,360px);
+    height:100dvh;
+    max-height:100dvh;
+    margin:0;
+    padding:110px 28px 32px;
+    display:flex !important;
+    flex-direction:column;
+    align-items:stretch;
+    justify-content:flex-start;
+    gap:0;
+    overflow-y:auto;
+    overflow-x:hidden;
+    background:var(--cream);
+    border:0;
+    border-left:1px solid rgba(21,22,15,.12);
+    border-radius:0;
+    box-shadow:-18px 0 55px rgba(21,22,15,.22);
+    z-index:1001;
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+    transform:translate3d(100%,0,0);
+    transition:transform .38s cubic-bezier(.16,1,.3,1),opacity .25s ease,visibility .25s ease;
+  }
+
+  .navlinks.open {
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
+    transform:translate3d(0,0,0);
+  }
+
+  .navlinks a {
+    display:flex;
+    align-items:center;
+    min-height:58px;
+    padding:0 2px;
+    border-bottom:1px solid rgba(21,22,15,.10);
+    font-size:18px;
+    font-weight:700;
+  }
+
+  .navlinks a:after {
+    display:none;
+  }
+
+  .nav-actions {
+    display:flex;
+    align-items:center;
+    flex:0 0 auto;
+    gap:10px;
+  }
+
+  .menu-btn {
+    display:grid !important;
+    place-items:center;
+    flex:0 0 44px;
+    width:44px;
+    min-width:44px;
+    height:44px;
+    padding:0;
+    margin:0;
+    border-radius:50%;
+    position:relative;
+    z-index:1002;
+    background:var(--olive) !important;
+    color:#fff;
+    line-height:1;
+    overflow:hidden;
+  }
+
+  .brand {
+    min-width:0;
+    flex:1 1 auto;
+  }
+
+  .brand>span:last-child {
+    min-width:0;
+    white-space:nowrap;
+  }
+
+  body.nav-drawer-open {
+    overflow:hidden;
+  }
+
+  .hero-wrap {
+    padding-top:78px;
+  }
+}
+
+/* =========================================================
+   HEADER WIDTH / HAMBURGER FIX
+   The scroll-reveal animations (.reveal-left / .reveal-right /
+   .reveal-zoom etc.) sit off-screen by up to 50px before they
+   play. On mobile that phantom space was leaking past <body>,
+   which made the browser's layout viewport wider than the real
+   screen. Since .nav is width:100% + position:fixed, it inherited
+   that wrong width too - so it stretched past the right edge
+   (clipping the hamburger button) and lost its "stays put while
+   scrolling" behaviour. Clipping the overflow right at <main>
+   keeps the animations working but stops it from ever reaching
+   <body>, so the header always measures against the real screen
+   width.
+   ========================================================= */
+main {
+  overflow-x: hidden;
+}
+
+@media (max-width:600px) {
+  .nav-inner {
+    width:calc(100% - 24px);
+  }
+
+  .brand {
+    gap:8px;
+  }
+
+  .brand-mark {
+    flex:0 0 34px;
+  }
+
+  .brand>span:last-child {
+    font-size:17px;
+  }
+
+  .navlinks {
+    width:min(88vw,350px);
+    padding-left:24px;
+    padding-right:24px;
   }
 }
