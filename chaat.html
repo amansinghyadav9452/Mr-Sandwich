@@ -9,7 +9,7 @@
   </title>
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=DM+Sans:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
   <link href="styles.css" rel="stylesheet"/>
   <style>
    .page-hero {
@@ -115,64 +115,33 @@
      </h1>
     </div>
    </section>
-   <section class="page-copy">
-    <div class="container">
-     <div class="eyebrow">
-      Indian street-food energy, without the chaos.
-     </div>
-     <h2 class="section-head" style="font-family:'Bebas Neue';font-size:clamp(55px,7vw,100px);line-height:.82;display:block">
-      CHAAT CORNER
-     </h2>
-     <p>
-      Peanut and corn chaats made to order, with bright chutneys, spice and crunch. The point is simple: familiar Indian flavours, handled with the same consistency as the grill.
-     </p>
-     <div class="page-cards">
-      <article class="food-card reveal">
-       <div class="food-img" style="background-image:url('https://images.unsplash.com/photo-1550507992-eb63ffee0847?auto=format&amp;fit=crop&amp;w=1000&amp;q=85')">
-       </div>
-       <div class="food-info">
-        <h3>
-         Made to order
-        </h3>
-        <p>
-         Fresh assembly, hot grill, clean finish.
+   <section class="page-copy chaat-page-feature">
+    <article class="chaat chaat-fullscreen">
+     <div class="chaat-fullscreen-inner">
+      <div class="chaat-fullscreen-copy">
+       <div class="chaat-fullscreen-copy-inner">
+        <p class="chaat-card-label">CHAAT CORNER</p>
+        <h2 class="chaat-card-title">
+         STREET FOOD.<br/>
+         KITCHEN STANDARDS.
+        </h2>
+        <p class="chaat-card-description">
+         Peanut and corn chaats made to order, with bright chutneys, spice and crunch &mdash; familiar Indian flavours, handled with the same consistency as the grill.
         </p>
+        <a class="chaat-card-cta" href="menu.html">
+         Order Chaat
+         <span aria-hidden="true">&rarr;</span>
+        </a>
        </div>
-      </article>
-      <article class="food-card reveal">
-       <div class="food-img" style="background-image:url('https://images.unsplash.com/photo-1553909489-cd47e0907980?auto=format&amp;fit=crop&amp;w=1000&amp;q=85')">
-       </div>
-       <div class="food-info">
-        <h3>
-         Big on flavour
-        </h3>
-        <p>
-         Indian ingredients with a modern sandwich format.
-        </p>
-       </div>
-      </article>
-      <article class="food-card reveal">
-       <div class="food-img" style="background-image:url('https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&amp;fit=crop&amp;w=1000&amp;q=85')">
-       </div>
-       <div class="food-info">
-        <h3>
-         Built consistently
-        </h3>
-        <p>
-         Recipes and portions designed to stay reliable.
-        </p>
-       </div>
-      </article>
+      </div>
+      <div class="chaat-fullscreen-media">
+       <picture>
+        <source media="(max-width: 900px)" srcset="chaat-fullscreen-mobile.png"/>
+        <img src="chaat-fullscreen-desktop.png" alt="Fresh peanut and corn chaat served in a bowl"/>
+       </picture>
+      </div>
      </div>
-     <div class="page-actions">
-      <a class="btn btn-dark" href="menu.html">
-       Explore menu &nearrow;
-      </a>
-      <a class="btn btn-light" href="locations.html">
-       Find / enquire
-      </a>
-     </div>
-    </div>
+    </article>
    </section>
   </main>
   <footer class="footer">
@@ -203,7 +172,7 @@
 const nav=document.getElementById('nav');
 window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>30));
 const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}}),{threshold:.12});
-document.querySelectorAll('.reveal').forEach(x=>obs.observe(x));
+document.querySelectorAll('.reveal,.chaat-fullscreen').forEach(x=>obs.observe(x));
 const cur=document.getElementById('cursor');
 window.addEventListener('mousemove',e=>{cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px'});
 document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>{cur.style.width='34px';cur.style.height='34px'});el.addEventListener('mouseleave',()=>{cur.style.width='16px';cur.style.height='16px'})});

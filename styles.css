@@ -1821,7 +1821,8 @@ h1,h2,h3 {
 }
 
 .nav-anchor {
-  scroll-margin-top:90px
+  scroll-margin-top:90px;
+  margin-bottom: 10px;
 }
 
 /* ---- New sections for the 12-page single-scroll site ---- */
@@ -3076,5 +3077,720 @@ main {
     width:min(88vw,350px);
     padding-left:24px;
     padding-right:24px;
+  }
+}
+
+
+/* =========================================================
+   CHAAT CORNER — MOBILE-FIRST FEATURE CARD
+   ========================================================= */
+.chaat-card-wrap {
+  display:flex;
+  justify-content:center;
+}
+
+.chaat-card {
+  width:100%;
+  max-width:380px;
+  overflow:hidden;
+  padding:28px 24px 20px;
+  border-radius:24px;
+  background:#CD4B1E;
+  color:#FFF2EB;
+  box-shadow:0 18px 45px rgba(80,25,10,.22);
+  font-family:"Inter",sans-serif;
+}
+
+.chaat-card-content {
+  position:relative;
+  z-index:1;
+}
+
+.chaat-card-label {
+  margin:0 0 16px;
+  color:#FFD1C1;
+  font-size:12px;
+  font-weight:700;
+  line-height:1;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+}
+
+.chaat-card-title {
+  margin:0;
+  color:#FFF2EB;
+  font-family:"Inter",sans-serif;
+  font-size:32px;
+  font-weight:800;
+  line-height:1.1;
+  letter-spacing:-.035em;
+  text-transform:uppercase;
+}
+
+.chaat-card-description {
+  max-width:330px;
+  margin:20px 0 0;
+  color:#FBE2D8;
+  font-family:"Inter",sans-serif;
+  font-size:14px;
+  font-weight:400;
+  line-height:1.5;
+}
+
+.chaat-card-cta {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  margin-top:24px;
+  padding:14px 22px;
+  border-radius:999px;
+  background:#111;
+  color:#fff;
+  font-family:"Inter",sans-serif;
+  font-size:14px;
+  font-weight:700;
+  line-height:1;
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+
+.chaat-card-cta:hover {
+  transform:scale(1.05);
+  box-shadow:0 10px 25px rgba(0,0,0,.18);
+}
+
+.chaat-card-cta:active {
+  transform:scale(.97);
+}
+
+.chaat-card-image {
+  display:flex;
+  justify-content:center;
+  align-items:flex-end;
+  margin:24px -4px -8px;
+}
+
+.chaat-card-image img {
+  display:block;
+  width:100%;
+  max-width:330px;
+  height:auto;
+  object-fit:contain;
+  filter:drop-shadow(0 22px 22px rgba(49,15,5,.38));
+}
+
+@media (min-width:601px) {
+  .chaat-card {
+    padding:32px 28px 24px;
+  }
+
+  .chaat-card-title {
+    font-size:34px;
+  }
+}
+
+/* =========================================================
+   CHAAT CORNER — DESKTOP LAYOUT
+   The mobile card stays compact; desktop expands into a balanced
+   two-column feature card so the component does not look like a
+   giant phone card sitting in the middle of a desktop page.
+   ========================================================= */
+@media (min-width: 901px) {
+  .chaat-card-wrap {
+    width: min(100% - 48px, 1100px);
+    margin-inline: auto;
+  }
+
+  .chaat-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 0.95fr);
+    align-items: center;
+    gap: 42px;
+    width: 100%;
+    max-width: 1100px;
+    min-height: 520px;
+    padding: 48px 52px;
+    border-radius: 32px;
+  }
+
+  .chaat-card-content {
+    max-width: 520px;
+  }
+
+  .chaat-card-label {
+    margin-bottom: 20px;
+    font-size: 13px;
+  }
+
+  .chaat-card-title {
+    max-width: 500px;
+    font-size: clamp(42px, 4.2vw, 64px);
+    line-height: 1.03;
+    letter-spacing: -0.045em;
+  }
+
+  .chaat-card-description {
+    max-width: 500px;
+    margin-top: 24px;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .chaat-card-cta {
+    margin-top: 30px;
+    padding: 16px 26px;
+    font-size: 15px;
+  }
+
+  .chaat-card-image {
+    min-height: 390px;
+    margin: 0 -18px -18px 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .chaat-card-image img {
+    width: 100%;
+    max-width: 500px;
+    filter: drop-shadow(0 30px 28px rgba(49, 15, 5, 0.42));
+    transform: translateY(6px);
+    transition: transform 0.35s ease;
+  }
+
+  .chaat-card:hover .chaat-card-image img {
+    transform: translateY(-4px) scale(1.015);
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1100px) {
+  .chaat-card {
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 0.9fr);
+    gap: 28px;
+    padding: 42px 38px;
+  }
+
+  .chaat-card-image {
+    min-height: 340px;
+  }
+}
+
+@media (max-width: 900px) {
+  .chaat-card-wrap {
+    width: min(100% - 28px, 380px);
+    margin-inline: auto;
+  }
+}
+
+
+/* =========================================================
+   CHAAT CORNER — FULL-SCREEN EDITORIAL HERO
+   Uses the supplied full-composition image as the entire canvas.
+   Text sits over the intentionally blank terracotta area on the left.
+   ========================================================= */
+.chaat.chaat-fullscreen {
+  position: relative;
+  width: 100%;
+  min-height: 100svh;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden;
+  background: #CD4B1E !important;
+  isolation: isolate;
+}
+
+.chaat-fullscreen .chaat-fullscreen-inner {
+  position: relative;
+  width: 100%;
+  min-height: 100svh;
+}
+
+/* Full-screen source image. It is no longer trapped inside a small card. */
+.chaat-fullscreen .chaat-fullscreen-media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #CD4B1E;
+}
+
+.chaat-fullscreen .chaat-fullscreen-media img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center center;
+  filter: saturate(1.02) contrast(1.01);
+  opacity: 0;
+  transform: scale(1.08);
+  clip-path: inset(0 0 0 0);
+  will-change: transform, opacity;
+  transition:
+    opacity 1s cubic-bezier(.22, 1, .36, 1),
+    transform 1.45s cubic-bezier(.16, 1, .3, 1),
+    filter 1s ease;
+}
+
+/* Keeps text readable without destroying the original image composition. */
+.chaat-fullscreen .chaat-fullscreen-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgba(205, 75, 30, .10) 0%,
+    rgba(205, 75, 30, .02) 42%,
+    rgba(0, 0, 0, .02) 100%
+  );
+}
+
+/* Left copy floats directly over the blank half of the supplied image. */
+.chaat-fullscreen .chaat-fullscreen-copy {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  width: 50%;
+  min-height: 100svh;
+  padding: clamp(88px, 9vw, 132px) clamp(28px, 6vw, 96px);
+  background: transparent;
+  color: #FFF2EB;
+  pointer-events: none;
+}
+
+.chaat-fullscreen .chaat-fullscreen-copy-inner {
+  width: min(100%, 610px);
+  margin: 0;
+  pointer-events: auto;
+}
+
+.chaat-fullscreen .chaat-card-label {
+  margin: 0 0 22px;
+  color: #FFD1C1;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .22em;
+  line-height: 1;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translate3d(0, 24px, 0);
+  will-change: opacity, transform;
+  transition:
+    opacity .65s ease,
+    transform .8s cubic-bezier(.22, 1, .36, 1);
+}
+
+.chaat-fullscreen .chaat-card-title {
+  max-width: 680px;
+  margin: 0;
+  color: #FFF2EB;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(46px, 5.1vw, 84px);
+  font-weight: 800;
+  line-height: .94;
+  letter-spacing: -.055em;
+  text-transform: uppercase;
+  text-wrap: balance;
+  opacity: 0;
+  transform: translate3d(0, 38px, 0);
+  will-change: opacity, transform;
+  transition:
+    opacity .8s ease .08s,
+    transform .95s cubic-bezier(.22, 1, .36, 1) .08s;
+}
+
+.chaat-fullscreen .chaat-card-description {
+  max-width: 550px;
+  margin: 28px 0 0;
+  color: #FBE2D8;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  opacity: 0;
+  transform: translate3d(0, 28px, 0);
+  will-change: opacity, transform;
+  transition:
+    opacity .75s ease .18s,
+    transform .9s cubic-bezier(.22, 1, .36, 1) .18s;
+}
+
+.chaat-fullscreen .chaat-card-cta {
+  display: inline-flex;
+  margin-top: 30px;
+  opacity: 0;
+  transform: translate3d(0, 22px, 0) scale(.96);
+  will-change: opacity, transform;
+  transition:
+    opacity .7s ease .28s,
+    transform .8s cubic-bezier(.22, 1, .36, 1) .28s,
+    box-shadow .2s ease;
+}
+
+.chaat-fullscreen .chaat-card-cta:hover {
+  transform: translate3d(0, 0, 0) scale(1.04);
+}
+
+.chaat-fullscreen.is-visible .chaat-card-label,
+.chaat-fullscreen.is-visible .chaat-card-title,
+.chaat-fullscreen.is-visible .chaat-card-description,
+.chaat-fullscreen.is-visible .chaat-card-cta,
+.chaat-fullscreen.visible .chaat-card-label,
+.chaat-fullscreen.visible .chaat-card-title,
+.chaat-fullscreen.visible .chaat-card-description,
+.chaat-fullscreen.visible .chaat-card-cta {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+.chaat-fullscreen.is-visible .chaat-fullscreen-media img,
+.chaat-fullscreen.visible .chaat-fullscreen-media img {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Desktop: preserve the complete 16:9 artwork and align copy to its blank half. */
+@media (min-width: 901px) {
+  .chaat.chaat-fullscreen {
+    min-height: 100svh;
+    height: 100svh;
+  }
+
+  .chaat-fullscreen .chaat-fullscreen-inner,
+  .chaat-fullscreen .chaat-fullscreen-media,
+  .chaat-fullscreen .chaat-fullscreen-copy {
+    min-height: 100svh;
+    height: 100%;
+  }
+
+  .chaat-fullscreen .chaat-fullscreen-copy {
+    width: 50%;
+    padding-left: clamp(48px, 7.5vw, 132px);
+    padding-right: clamp(40px, 5vw, 90px);
+  }
+
+  .chaat-fullscreen .chaat-card-label {
+    margin-bottom: 24px;
+    font-size: 13px;
+  }
+
+  .chaat-fullscreen .chaat-card-title {
+    font-size: clamp(52px, 5.25vw, 88px);
+    line-height: .93;
+  }
+
+  .chaat-fullscreen .chaat-card-description {
+    max-width: 570px;
+    margin-top: 30px;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .chaat-fullscreen .chaat-card-cta {
+    margin-top: 34px;
+    padding: 17px 28px;
+    font-size: 15px;
+  }
+}
+
+/* Large displays: slightly stronger editorial scale without changing composition. */
+@media (min-width: 1400px) {
+  .chaat-fullscreen .chaat-fullscreen-copy {
+    padding-left: clamp(72px, 8vw, 160px);
+    padding-right: clamp(64px, 6vw, 120px);
+  }
+}
+
+/* Mobile: keep the copy readable and avoid cropping the intentional blank half. */
+@media (max-width: 900px) {
+  .chaat.chaat-fullscreen {
+    min-height: auto;
+    background: #CD4B1E !important;
+  }
+
+  .chaat-fullscreen .chaat-fullscreen-inner {
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .chaat-fullscreen .chaat-fullscreen-copy {
+    width: 100%;
+    min-height: auto;
+    padding: 84px 24px 48px;
+    background: #CD4B1E;
+  }
+
+  .chaat-fullscreen .chaat-fullscreen-copy-inner {
+    width: 100%;
+    max-width: 620px;
+  }
+
+  .chaat-fullscreen .chaat-card-title {
+    max-width: 620px;
+    font-size: clamp(40px, 10.5vw, 62px);
+    line-height: .96;
+  }
+
+  .chaat-fullscreen .chaat-card-description {
+    max-width: 600px;
+    margin-top: 22px;
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .chaat-fullscreen .chaat-card-cta {
+    margin-top: 24px;
+  }
+
+  .chaat-fullscreen .chaat-fullscreen-media {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: min(82svh, 680px);
+    min-height: 420px;
+  }
+
+  .chaat-fullscreen .chaat-fullscreen-media img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
+@media (max-width: 480px) {
+  .chaat-fullscreen .chaat-fullscreen-copy {
+    padding: 72px 22px 42px;
+  }
+
+  .chaat-fullscreen .chaat-card-label {
+    margin-bottom: 17px;
+  }
+
+  .chaat-fullscreen .chaat-card-title {
+    font-size: clamp(36px, 10.8vw, 52px);
+  }
+
+  .chaat-fullscreen .chaat-fullscreen-media {
+    height: 68svh;
+    min-height: 390px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chaat-fullscreen .chaat-card-label,
+  .chaat-fullscreen .chaat-card-title,
+  .chaat-fullscreen .chaat-card-description,
+  .chaat-fullscreen .chaat-card-cta,
+  .chaat-fullscreen .chaat-fullscreen-media img {
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+/* Standalone Chaat page: allow the feature to genuinely reach the viewport edges. */
+.chaat-page-feature {
+  padding: 0 !important;
+  margin: 0;
+}
+
+.chaat-page-feature .chaat-fullscreen {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+
+/* Chaat visibility compatibility: the shared reveal observer uses .visible. */
+.chaat-fullscreen.visible .chaat-card-label,
+.chaat-fullscreen.visible .chaat-card-title,
+.chaat-fullscreen.visible .chaat-card-description,
+.chaat-fullscreen.visible .chaat-card-cta {
+  opacity: 1 !important;
+  transform: translate3d(0, 0, 0) scale(1) !important;
+}
+
+.chaat-fullscreen.visible .chaat-fullscreen-media img {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
+
+/* =========================================================
+   CHAAT CORNER — RESPONSIVE ARTWORK SWAP
+   Desktop uses the wide composition; mobile uses the vertical composition.
+   ========================================================= */
+.chaat-fullscreen .chaat-fullscreen-media picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.chaat-fullscreen .chaat-fullscreen-media picture img {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 900px) {
+  .chaat-fullscreen .chaat-fullscreen-media picture {
+    width: 100%;
+    height: 100%;
+  }
+
+  .chaat-fullscreen .chaat-fullscreen-media picture img {
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
+/* ============================================================
+   CHAAT CORNER - MOBILE IMAGE-FIRST OVERLAY
+   The supplied mobile artwork already contains the blank
+   terracotta copy area. Text must sit directly on that artwork.
+   ============================================================ */
+@media (max-width: 900px) {
+  .chaat.chaat-fullscreen {
+    position: relative;
+    width: 100%;
+    min-height: 100svh;
+    height: 100svh;
+    overflow: hidden;
+    background: #CD4B1E !important;
+  }
+
+  .chaat-fullscreen .chaat-fullscreen-inner {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 100svh;
+  }
+
+  .chaat-fullscreen .chaat-fullscreen-media {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    background: #CD4B1E;
+  }
+
+  .chaat-fullscreen .chaat-fullscreen-media picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .chaat-fullscreen .chaat-fullscreen-media img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  .chaat-fullscreen .chaat-fullscreen-media::after {
+    background: linear-gradient(
+      180deg,
+      rgba(205, 75, 30, 0.02) 0%,
+      rgba(205, 75, 30, 0) 58%,
+      rgba(0, 0, 0, 0.08) 100%
+    );
+  }
+
+  .chaat-fullscreen .chaat-fullscreen-copy {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    min-height: 100%;
+    height: 100%;
+    padding: clamp(72px, 13vw, 108px) 22px 0;
+    background: transparent !important;
+    pointer-events: none;
+  }
+
+  .chaat-fullscreen .chaat-fullscreen-copy-inner {
+    width: min(100%, 620px);
+    margin: 0;
+    pointer-events: auto;
+  }
+
+  .chaat-fullscreen .chaat-card-label,
+  .chaat-fullscreen .chaat-card-title,
+  .chaat-fullscreen .chaat-card-description,
+  .chaat-fullscreen .chaat-card-cta {
+    position: relative;
+    z-index: 4;
+  }
+
+  .chaat-fullscreen .chaat-card-label {
+    margin-bottom: 14px;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-shadow: 0 1px 12px rgba(80, 25, 10, 0.12);
+  }
+
+  .chaat-fullscreen .chaat-card-title {
+    max-width: 350px;
+    font-size: clamp(39px, 10.4vw, 52px);
+    line-height: 0.94;
+    letter-spacing: -0.045em;
+    text-shadow: 0 2px 18px rgba(80, 25, 10, 0.1);
+  }
+
+  .chaat-fullscreen .chaat-card-description {
+    max-width: 350px;
+    margin-top: 18px;
+    font-size: 13px;
+    line-height: 1.5;
+    text-shadow: 0 1px 12px rgba(80, 25, 10, 0.1);
+  }
+
+  .chaat-fullscreen .chaat-card-cta {
+    margin-top: 19px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chaat.chaat-fullscreen {
+    height: 100svh;
+    min-height: 100svh;
+  }
+
+  .chaat-fullscreen .chaat-fullscreen-copy {
+    padding: 70px 20px 0;
+  }
+
+  .chaat-fullscreen .chaat-card-title {
+    max-width: 340px;
+    font-size: clamp(36px, 10.2vw, 46px);
+  }
+
+  .chaat-fullscreen .chaat-card-description {
+    max-width: 342px;
+    margin-top: 17px;
+    font-size: 12.8px;
+  }
+
+  .chaat-fullscreen .chaat-card-cta {
+    margin-top: 18px;
   }
 }
