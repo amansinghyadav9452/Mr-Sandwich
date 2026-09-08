@@ -1,1 +1,221 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%A5%AA%3C/text%3E%3C/svg%3E"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MR. SANDWICH — THE MENU</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"><style>.page-hero{min-height:65vh;padding:160px 0 90px;background:var(--ink);color:white;display:flex;align-items:end}.page-hero h1{font-family:"Bebas Neue";font-size:clamp(80px,12vw,170px);line-height:.78;color:var(--lime);max-width:1000px}.page-copy{padding:100px 0}.page-copy p{font-size:20px;line-height:1.8;color:#5f5a51;max-width:760px;margin:25px 0 35px}.page-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:55px}.page-actions{display:flex;gap:12px;flex-wrap:wrap}.page-form{max-width:620px;margin-top:30px}@media(max-width:800px){.page-cards{grid-template-columns:1fr}.page-hero{min-height:58vh}}</style></head><body><div class="cursor" id="cursor"></div><header class="nav" id="nav"><div class="container nav-inner"><a class="logo" href="index.html">MR<span>.</span>SANDWICH</a><nav class="navlinks"><a href="story.html">Our Story</a><a href="menu.html">Menu</a><a href="chaat.html">Chaat</a><a href="franchise.html">Franchise</a></nav><a class="nav-cta" href="locations.html">Find / Enquire</a><button class="menu-btn" id="mobileMenu">☰</button></div></header><main><section class="page-hero"><div class="container"><div class="eyebrow" style="color:var(--red)">THE MENU</div><h1>Fresh stacks. Loud flavours.</h1></div></section><section class="page-copy"><div class="container"><div class="eyebrow">Built for the craving.</div><h2 class="section-head" style="font-family:'Bebas Neue';font-size:clamp(55px,7vw,100px);line-height:.82;display:block">THE MENU</h2><p>Explore the full Mr. Sandwich spread: grilled subs, loaded comfort food, chaat and sides. Prices and items are presented as a frontend concept and can be connected to a live ordering system later.</p><div class="filters"><button class="filter active">All</button><button class="filter">Subs</button><button class="filter">Chaat</button><button class="filter">Comfort</button></div><div class="page-cards"><article class="food-card reveal"><div class="food-img" style="background-image:url('https://images.unsplash.com/photo-1550507992-eb63ffee0847?auto=format&fit=crop&w=1000&q=85')"></div><div class="food-info"><h3>Made to order</h3><p>Fresh assembly, hot grill, clean finish.</p></div></article><article class="food-card reveal"><div class="food-img" style="background-image:url('https://images.unsplash.com/photo-1553909489-cd47e0907980?auto=format&fit=crop&w=1000&q=85')"></div><div class="food-info"><h3>Big on flavour</h3><p>Indian ingredients with a modern sandwich format.</p></div></article><article class="food-card reveal"><div class="food-img" style="background-image:url('https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&fit=crop&w=1000&q=85')"></div><div class="food-info"><h3>Built consistently</h3><p>Recipes and portions designed to stay reliable.</p></div></article></div></div></section></main><footer class="footer"><div class="container footer-inner"><div><strong>MR. SANDWICH</strong> — Fresh subs. Indian soul.</div><div><a href="index.html">Home</a> · <a href="menu.html">Menu</a> · <a href="locations.html">Contact</a></div></div></footer><script type="module">import { animate } from "https://cdn.jsdelivr.net/npm/motion@13.1.0/+esm";const nav=document.getElementById('nav');window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>30));const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(x=>obs.observe(x));const cur=document.getElementById('cursor');window.addEventListener('mousemove',e=>{cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px'});document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>{cur.style.width='34px';cur.style.height='34px'});el.addEventListener('mouseleave',()=>{cur.style.width='16px';cur.style.height='16px'})});document.getElementById('mobileMenu')?.addEventListener('click',()=>document.querySelector('.navlinks').classList.toggle('open'));document.querySelector('.page-form')?.addEventListener('submit',e=>{e.preventDefault();const b=e.target.querySelector('button');b.textContent='ENQUIRY SENT ✓';setTimeout(()=>{b.textContent='SEND ENQUIRY ↗';e.target.reset()},2200)});animate('.page-hero h1',{opacity:[0,1],y:[50,0]},{duration:.8,ease:'easeOut'});</script></body></html>
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <link href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%A5%AA%3C/text%3E%3C/svg%3E" rel="icon"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   MR. SANDWICH &mdash; THE MENU
+  </title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="styles.css" rel="stylesheet"/>
+  <style>
+   .page-hero {
+  min-height:65vh;
+  padding:160px 0 90px;
+  background:var(--ink);
+  color:white;
+  display:flex;
+  align-items:end
+}
+
+.page-hero h1 {
+  font-family:"Bebas Neue";
+  font-size:clamp(80px,12vw,170px);
+  line-height:.78;
+  color:var(--lime);
+  max-width:1000px
+}
+
+.page-copy {
+  padding:100px 0
+}
+
+.page-copy p {
+  font-size:20px;
+  line-height:1.8;
+  color:#5f5a51;
+  max-width:760px;
+  margin:25px 0 35px
+}
+
+.page-cards {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin-top:55px
+}
+
+.page-actions {
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap
+}
+
+.page-form {
+  max-width:620px;
+  margin-top:30px
+}
+
+@media(max-width:800px) {
+  .page-cards {
+    grid-template-columns:1fr
+  }
+  .page-hero {
+    min-height:58vh
+  }
+}
+  </style>
+ </head>
+ <body>
+  <div class="cursor" id="cursor">
+  </div>
+  <header class="nav" id="nav">
+   <div class="container nav-inner">
+    <a class="logo" href="index.html">
+     MR
+     <span>
+      .
+     </span>
+     SANDWICH
+    </a>
+    <nav class="navlinks">
+     <a href="story.html">
+      Our Story
+     </a>
+     <a href="menu.html">
+      Menu
+     </a>
+     <a href="chaat.html">
+      Chaat
+     </a>
+     <a href="franchise.html">
+      Franchise
+     </a>
+    </nav>
+    <a class="nav-cta" href="locations.html">
+     Find / Enquire
+    </a>
+    <button class="menu-btn" id="mobileMenu">
+     ☰
+    </button>
+   </div>
+  </header>
+  <main>
+   <section class="page-hero">
+    <div class="container">
+     <div class="eyebrow" style="color:var(--red)">
+      THE MENU
+     </div>
+     <h1>
+      Fresh stacks. Loud flavours.
+     </h1>
+    </div>
+   </section>
+   <section class="page-copy">
+    <div class="container">
+     <div class="eyebrow">
+      Built for the craving.
+     </div>
+     <h2 class="section-head" style="font-family:'Bebas Neue';font-size:clamp(55px,7vw,100px);line-height:.82;display:block">
+      THE MENU
+     </h2>
+     <p>
+      Explore the full Mr. Sandwich spread: grilled subs, loaded comfort food, chaat and sides. Prices and items are presented as a frontend concept and can be connected to a live ordering system later.
+     </p>
+     <div class="filters">
+      <button class="filter active">
+       All
+      </button>
+      <button class="filter">
+       Subs
+      </button>
+      <button class="filter">
+       Chaat
+      </button>
+      <button class="filter">
+       Comfort
+      </button>
+     </div>
+     <div class="page-cards">
+      <article class="food-card reveal">
+       <div class="food-img" style="background-image:url('https://images.unsplash.com/photo-1550507992-eb63ffee0847?auto=format&amp;fit=crop&amp;w=1000&amp;q=85')">
+       </div>
+       <div class="food-info">
+        <h3>
+         Made to order
+        </h3>
+        <p>
+         Fresh assembly, hot grill, clean finish.
+        </p>
+       </div>
+      </article>
+      <article class="food-card reveal">
+       <div class="food-img" style="background-image:url('https://images.unsplash.com/photo-1553909489-cd47e0907980?auto=format&amp;fit=crop&amp;w=1000&amp;q=85')">
+       </div>
+       <div class="food-info">
+        <h3>
+         Big on flavour
+        </h3>
+        <p>
+         Indian ingredients with a modern sandwich format.
+        </p>
+       </div>
+      </article>
+      <article class="food-card reveal">
+       <div class="food-img" style="background-image:url('https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&amp;fit=crop&amp;w=1000&amp;q=85')">
+       </div>
+       <div class="food-info">
+        <h3>
+         Built consistently
+        </h3>
+        <p>
+         Recipes and portions designed to stay reliable.
+        </p>
+       </div>
+      </article>
+     </div>
+    </div>
+   </section>
+  </main>
+  <footer class="footer">
+   <div class="container footer-inner">
+    <div>
+     <strong>
+      MR. SANDWICH
+     </strong>
+     &mdash; Fresh subs. Indian soul.
+    </div>
+    <div>
+     <a href="index.html">
+      Home
+     </a>
+     &middot;
+     <a href="menu.html">
+      Menu
+     </a>
+     &middot;
+     <a href="locations.html">
+      Contact
+     </a>
+    </div>
+   </div>
+  </footer>
+  <script type="module">
+   import { animate } from "https://cdn.jsdelivr.net/npm/motion@13.1.0/+esm";
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>30));
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(x=>obs.observe(x));
+const cur=document.getElementById('cursor');
+window.addEventListener('mousemove',e=>{cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px'});
+document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>{cur.style.width='34px';cur.style.height='34px'});el.addEventListener('mouseleave',()=>{cur.style.width='16px';cur.style.height='16px'})});
+document.getElementById('mobileMenu')?.addEventListener('click',()=>document.querySelector('.navlinks').classList.toggle('open'));
+document.querySelector('.page-form')?.addEventListener('submit',e=>{e.preventDefault();const b=e.target.querySelector('button');b.textContent='ENQUIRY SENT ✓';setTimeout(()=>{b.textContent='SEND ENQUIRY ↗';e.target.reset()},2200)});
+animate('.page-hero h1',{opacity:[0,1],y:[50,0]},{duration:.8,ease:'easeOut'});
+  </script>
+ </body>
+</html>
+

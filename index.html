@@ -1,195 +1,842 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%A5%AA%3C/text%3E%3C/svg%3E">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#f4ead7">
-<title>MR. SANDWICH — More Than Just a Bite</title>
-<meta name="description" content="Mr. Sandwich — fresh ingredients, bold flavours and food made with a little more care.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800;900&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-</head>
-<body class="home-page">
-<div class="cursor" id="cursor"></div>
-<header class="nav" id="nav">
-  <div class="container nav-inner">
-    <a class="brand" href="index.html" aria-label="Mr. Sandwich home"><span class="brand-mark">♨</span><span>MR.<b>SANDWICH</b><small>MORE THAN JUST A BITE</small></span></a>
-    <nav class="navlinks" id="navLinks" aria-label="Primary navigation">
-      <a class="active" href="#home">Home</a><a href="#menu">Menu</a><a href="#story">Our Story</a><a href="#franchise">Franchise</a><a href="#locations">Locations</a><a href="#contact">Contact</a>
+ <head>
+  <meta charset="utf-8"/>
+  <link href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%A5%AA%3C/text%3E%3C/svg%3E" rel="icon"/>
+  <meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
+  <meta content="#f4ead7" name="theme-color"/>
+  <title>
+   MR. SANDWICH &mdash; More Than Just a Bite
+  </title>
+  <meta content="Mr. Sandwich &mdash; fresh ingredients, bold flavours and food made with a little more care." name="description"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=DM+Sans:wght@400;500;600;700;800&amp;family=Playfair+Display:wght@600;700;800;900&amp;family=Caveat:wght@600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="styles.css" rel="stylesheet"/>
+ </head>
+ <body class="home-page">
+  <div class="cursor" id="cursor">
+  </div>
+  <header class="nav" id="nav">
+   <div class="container nav-inner">
+    <a aria-label="Mr. Sandwich home" class="brand" href="index.html">
+     <span class="brand-mark">
+      ♨
+     </span>
+     <span>
+      MR.
+      <b>
+       SANDWICH
+      </b>
+      <small>
+       MORE THAN JUST A BITE
+      </small>
+     </span>
+    </a>
+    <nav aria-label="Primary navigation" class="navlinks" id="navLinks">
+     <a class="active" href="#home">
+      Home
+     </a>
+     <a href="#menu">
+      Menu
+     </a>
+     <a href="#story">
+      Our Story
+     </a>
+     <a href="#franchise">
+      Franchise
+     </a>
+     <a href="#locations">
+      Locations
+     </a>
+     <a href="#contact">
+      Contact
+     </a>
     </nav>
-    <div class="nav-actions"><button class="search-btn" type="button" aria-label="Search">⌕</button><a class="nav-cta" href="#menu">♧ &nbsp; Order Now</a><button class="menu-btn" id="mobileMenu" type="button" aria-label="Open menu" aria-expanded="false">☰</button></div>
-  </div>
-</header>
-
-<main>
-<!-- PAGE 1 — HOME -->
-<section class="hero-wrap nav-anchor" id="home">
-  <div class="hero-shell">
-    <div class="container">
-    <div class="hero">
-      <div class="hero-copy reveal-hero">
-        <div class="eyebrow">GOOD FOOD <i>•</i> GOOD PEOPLE <i>•</i> GREAT VIBES</div>
-        <h1>Sandwiches<br><span>That Make</span><em>Life Tastier</em></h1>
-        <p>Fresh ingredients, bold flavours, and a whole lot of love — that's the Mr. Sandwich promise. Bite into happiness with every layer.</p>
-        <div class="actions"><a class="btn btn-primary" href="#menu">Explore Menu <span>→</span></a><a class="story-link" href="#story"><span class="play">▶</span> Watch Our Story</a></div>
-        <div class="feature-row">
-          <div><span class="feature-icon">♧</span><b>100% Fresh</b><small>Ingredients</small></div>
-          <div><span class="feature-icon">♨</span><b>Made with</b><small>Love</small></div>
-          <div><span class="feature-icon">⌁</span><b>No Artificial</b><small>Preservatives</small></div>
+    <div class="nav-actions">
+     <button aria-label="Search" class="search-btn" type="button">
+      &telrec;
+     </button>
+     <a class="nav-cta" href="#menu">
+      ♧ &nbsp; Order Now
+     </a>
+     <button aria-expanded="false" aria-label="Open menu" class="menu-btn" id="mobileMenu" type="button">
+      ☰
+     </button>
+    </div>
+   </div>
+  </header>
+  <main>
+   <!-- PAGE 1 — HOME -->
+   <section class="hero-wrap nav-anchor" id="home">
+    <div class="hero-shell">
+     <div class="container">
+      <div class="hero">
+       <div class="hero-copy reveal-hero">
+        <div class="eyebrow">
+         GOOD FOOD
+         <i>
+          &bull;
+         </i>
+         GOOD PEOPLE
+         <i>
+          &bull;
+         </i>
+         GREAT VIBES
         </div>
+        <h1>
+         Sandwiches
+         <br/>
+         <span>
+          That Make
+         </span>
+         <em>
+          Life Tastier
+         </em>
+        </h1>
+        <p>
+         Fresh ingredients, bold flavours, and a whole lot of love &mdash; that's the Mr. Sandwich promise. Bite into happiness with every layer.
+        </p>
+        <div class="actions">
+         <a class="btn btn-primary" href="#menu">
+          Explore Menu
+          <span>
+           &rarr;
+          </span>
+         </a>
+         <a class="story-link" href="#story">
+          <span class="play">
+           ▶
+          </span>
+          Watch Our Story
+         </a>
+        </div>
+        <div class="feature-row">
+         <div>
+          <span class="feature-icon">
+           ♧
+          </span>
+          <b>
+           100% Fresh
+          </b>
+          <small>
+           Ingredients
+          </small>
+         </div>
+         <div>
+          <span class="feature-icon">
+           ♨
+          </span>
+          <b>
+           Made with
+          </b>
+          <small>
+           Love
+          </small>
+         </div>
+         <div>
+          <span class="feature-icon">
+           ⌁
+          </span>
+          <b>
+           No Artificial
+          </b>
+          <small>
+           Preservatives
+          </small>
+         </div>
+        </div>
+       </div>
       </div>
+      <div class="stats-bar">
+       <div>
+        <strong>
+         50K+
+        </strong>
+        <span>
+         Happy Customers
+        </span>
+       </div>
+       <div>
+        <strong>
+         20+
+        </strong>
+        <span>
+         Delicious Variants
+        </span>
+       </div>
+       <div>
+        <strong>
+         10+
+        </strong>
+        <span>
+         Cities &amp; Counting
+        </span>
+       </div>
+       <div class="quote">
+        &ldquo;Best sandwiches in town!
+        <br/>
+        Absolutely love the taste and quality.&rdquo;
+        <small>
+         &starf;&starf;&starf;&starf;&starf;
+        </small>
+       </div>
+      </div>
+     </div>
     </div>
-    <div class="stats-bar">
-      <div><strong>50K+</strong><span>Happy Customers</span></div><div><strong>20+</strong><span>Delicious Variants</span></div><div><strong>10+</strong><span>Cities &amp; Counting</span></div><div class="quote">“Best sandwiches in town!<br>Absolutely love the taste and quality.” <small>★★★★★</small></div>
+   </section>
+   <!-- PAGE 2 — CRAVING / CATEGORIES -->
+   <section class="craving-section nav-anchor" id="craving">
+    <div class="container">
+     <div class="section-head">
+      <div>
+       <div class="eyebrow">
+        A LITTLE SOMETHING FOR EVERY CRAVING
+       </div>
+       <h2>
+        What's Your
+        <span>
+         Craving?
+        </span>
+       </h2>
+      </div>
+      <a class="outline-link" href="#menu">
+       View Full Menu
+       <b>
+        &rarr;
+       </b>
+      </a>
+     </div>
+     <div class="category-grid">
+      <a class="category-card" href="#menu">
+       <img alt="Classic sandwich" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 400 300%27%3E%3Cdefs%3E%3ClinearGradient id=%27g%27 x1=%270%27 y1=%270%27 x2=%271%27 y2=%271%27%3E%3Cstop offset=%270%27 stop-color=%27%23e7dcc2%27/%3E%3Cstop offset=%271%27 stop-color=%27%23c98a49%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%27400%27 height=%27300%27 fill=%27url(%23g)%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-family=%27sans-serif%27 font-size=%2722%27 fill=%27%233a2a12%27 text-anchor=%27middle%27 dominant-baseline=%27middle%27%3EMR. SANDWICH%3C/text%3E%3C/svg%3E'" src="https://images.unsplash.com/photo-1553909489-cd47e0907980?auto=format&amp;fit=crop&amp;w=900&amp;q=82"/>
+       <span>
+        Classic
+        <br/>
+        Sandwiches
+        <b>
+         &nearrow;
+        </b>
+       </span>
+      </a>
+      <a class="category-card" href="#menu">
+       <img alt="Burger" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 400 300%27%3E%3Cdefs%3E%3ClinearGradient id=%27g%27 x1=%270%27 y1=%270%27 x2=%271%27 y2=%271%27%3E%3Cstop offset=%270%27 stop-color=%27%23e7dcc2%27/%3E%3Cstop offset=%271%27 stop-color=%27%23c98a49%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%27400%27 height=%27300%27 fill=%27url(%23g)%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-family=%27sans-serif%27 font-size=%2722%27 fill=%27%233a2a12%27 text-anchor=%27middle%27 dominant-baseline=%27middle%27%3EMR. SANDWICH%3C/text%3E%3C/svg%3E'" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&amp;fit=crop&amp;w=900&amp;q=82"/>
+       <span>
+        Burgers
+        <b>
+         &nearrow;
+        </b>
+       </span>
+      </a>
+      <a class="category-card" href="#menu">
+       <img alt="Fries" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 400 300%27%3E%3Cdefs%3E%3ClinearGradient id=%27g%27 x1=%270%27 y1=%270%27 x2=%271%27 y2=%271%27%3E%3Cstop offset=%270%27 stop-color=%27%23e7dcc2%27/%3E%3Cstop offset=%271%27 stop-color=%27%23c98a49%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%27400%27 height=%27300%27 fill=%27url(%23g)%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-family=%27sans-serif%27 font-size=%2722%27 fill=%27%233a2a12%27 text-anchor=%27middle%27 dominant-baseline=%27middle%27%3EMR. SANDWICH%3C/text%3E%3C/svg%3E'" src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&amp;fit=crop&amp;w=900&amp;q=82"/>
+       <span>
+        Snacks &amp;
+        <br/>
+        Sides
+        <b>
+         &nearrow;
+        </b>
+       </span>
+      </a>
+      <a class="category-card" href="#menu">
+       <img alt="Refreshing drink" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 400 300%27%3E%3Cdefs%3E%3ClinearGradient id=%27g%27 x1=%270%27 y1=%270%27 x2=%271%27 y2=%271%27%3E%3Cstop offset=%270%27 stop-color=%27%23e7dcc2%27/%3E%3Cstop offset=%271%27 stop-color=%27%23c98a49%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%27400%27 height=%27300%27 fill=%27url(%23g)%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-family=%27sans-serif%27 font-size=%2722%27 fill=%27%233a2a12%27 text-anchor=%27middle%27 dominant-baseline=%27middle%27%3EMR. SANDWICH%3C/text%3E%3C/svg%3E'" src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&amp;fit=crop&amp;w=900&amp;q=82"/>
+       <span>
+        Beverages
+        <b>
+         &nearrow;
+        </b>
+       </span>
+      </a>
+     </div>
     </div>
+   </section>
+   <!-- PAGE 3 — WHY MR. SANDWICH -->
+   <section class="whyus nav-anchor" id="whyus">
+    <div class="container">
+     <div class="section-head reveal-up">
+      <div>
+       <div class="eyebrow">
+        WHY PEOPLE KEEP COMING BACK
+       </div>
+       <h2>
+        Why
+        <span>
+         Mr. Sandwich?
+        </span>
+       </h2>
+      </div>
+     </div>
+     <div class="whyus-grid">
+      <div class="whyus-card reveal-up">
+       <i>
+        ♧
+       </i>
+       <h3>
+        100% Fresh
+       </h3>
+       <p>
+        Vegetables, sauces and proteins prepped same-day, every day, at every outlet.
+       </p>
+      </div>
+      <div class="whyus-card reveal-up">
+       <i>
+        ♨
+       </i>
+       <h3>
+        Made with Love
+       </h3>
+       <p>
+        Every order is assembled fresh on the grill &mdash; never pre-made, never rushed.
+       </p>
+      </div>
+      <div class="whyus-card reveal-up">
+       <i>
+        ⌁
+       </i>
+       <h3>
+        No Artificial Preservatives
+       </h3>
+       <p>
+        Honest ingredients, clean labels &mdash; food that tastes like it should.
+       </p>
+      </div>
+      <div class="whyus-card reveal-up">
+       <i>
+        &starf;
+       </i>
+       <h3>
+        Consistent Quality
+       </h3>
+       <p>
+        Standardised recipes and training so your favourite tastes the same, everywhere.
+       </p>
+      </div>
+     </div>
     </div>
-  </div>
-</section>
-
-<!-- PAGE 2 — CRAVING / CATEGORIES -->
-<section class="craving-section nav-anchor" id="craving"><div class="container">
-  <div class="section-head"><div><div class="eyebrow">A LITTLE SOMETHING FOR EVERY CRAVING</div><h2>What's Your <span>Craving?</span></h2></div><a class="outline-link" href="#menu">View Full Menu <b>→</b></a></div>
-  <div class="category-grid">
-    <a class="category-card" href="#menu"><img src="https://images.unsplash.com/photo-1553909489-cd47e0907980?auto=format&fit=crop&w=900&q=82" alt="Classic sandwich" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 400 300%27%3E%3Cdefs%3E%3ClinearGradient id=%27g%27 x1=%270%27 y1=%270%27 x2=%271%27 y2=%271%27%3E%3Cstop offset=%270%27 stop-color=%27%23e7dcc2%27/%3E%3Cstop offset=%271%27 stop-color=%27%23c98a49%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%27400%27 height=%27300%27 fill=%27url(%23g)%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-family=%27sans-serif%27 font-size=%2722%27 fill=%27%233a2a12%27 text-anchor=%27middle%27 dominant-baseline=%27middle%27%3EMR. SANDWICH%3C/text%3E%3C/svg%3E'"><span>Classic<br>Sandwiches <b>↗</b></span></a>
-    <a class="category-card" href="#menu"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=82" alt="Burger" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 400 300%27%3E%3Cdefs%3E%3ClinearGradient id=%27g%27 x1=%270%27 y1=%270%27 x2=%271%27 y2=%271%27%3E%3Cstop offset=%270%27 stop-color=%27%23e7dcc2%27/%3E%3Cstop offset=%271%27 stop-color=%27%23c98a49%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%27400%27 height=%27300%27 fill=%27url(%23g)%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-family=%27sans-serif%27 font-size=%2722%27 fill=%27%233a2a12%27 text-anchor=%27middle%27 dominant-baseline=%27middle%27%3EMR. SANDWICH%3C/text%3E%3C/svg%3E'"><span>Burgers <b>↗</b></span></a>
-    <a class="category-card" href="#menu"><img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=900&q=82" alt="Fries" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 400 300%27%3E%3Cdefs%3E%3ClinearGradient id=%27g%27 x1=%270%27 y1=%270%27 x2=%271%27 y2=%271%27%3E%3Cstop offset=%270%27 stop-color=%27%23e7dcc2%27/%3E%3Cstop offset=%271%27 stop-color=%27%23c98a49%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%27400%27 height=%27300%27 fill=%27url(%23g)%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-family=%27sans-serif%27 font-size=%2722%27 fill=%27%233a2a12%27 text-anchor=%27middle%27 dominant-baseline=%27middle%27%3EMR. SANDWICH%3C/text%3E%3C/svg%3E'"><span>Snacks &amp;<br>Sides <b>↗</b></span></a>
-    <a class="category-card" href="#menu"><img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=900&q=82" alt="Refreshing drink" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 400 300%27%3E%3Cdefs%3E%3ClinearGradient id=%27g%27 x1=%270%27 y1=%270%27 x2=%271%27 y2=%271%27%3E%3Cstop offset=%270%27 stop-color=%27%23e7dcc2%27/%3E%3Cstop offset=%271%27 stop-color=%27%23c98a49%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%27400%27 height=%27300%27 fill=%27url(%23g)%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-family=%27sans-serif%27 font-size=%2722%27 fill=%27%233a2a12%27 text-anchor=%27middle%27 dominant-baseline=%27middle%27%3EMR. SANDWICH%3C/text%3E%3C/svg%3E'"><span>Beverages <b>↗</b></span></a>
-  </div>
-</div></section>
-
-<!-- PAGE 3 — WHY MR. SANDWICH -->
-<section class="whyus nav-anchor" id="whyus"><div class="container">
-  <div class="section-head reveal-up"><div><div class="eyebrow">WHY PEOPLE KEEP COMING BACK</div><h2>Why <span>Mr. Sandwich?</span></h2></div></div>
-  <div class="whyus-grid">
-    <div class="whyus-card reveal-up"><i>♧</i><h3>100% Fresh</h3><p>Vegetables, sauces and proteins prepped same-day, every day, at every outlet.</p></div>
-    <div class="whyus-card reveal-up"><i>♨</i><h3>Made with Love</h3><p>Every order is assembled fresh on the grill — never pre-made, never rushed.</p></div>
-    <div class="whyus-card reveal-up"><i>⌁</i><h3>No Artificial Preservatives</h3><p>Honest ingredients, clean labels — food that tastes like it should.</p></div>
-    <div class="whyus-card reveal-up"><i>★</i><h3>Consistent Quality</h3><p>Standardised recipes and training so your favourite tastes the same, everywhere.</p></div>
-  </div>
-</div></section>
-
-<!-- PAGE 4 — MENU -->
-<section class="page-hero nav-anchor" id="menu"><div class="container reveal-up"><div class="eyebrow" style="color:var(--gold)">THE MENU</div><h1>Fresh stacks.<br>Loud flavours.</h1></div></section>
-<section class="page-copy"><div class="container">
-  <div class="eyebrow">Built for the craving.</div>
-  <div class="section-head"><h2>The Full Menu</h2></div>
-  <p>Explore the full Mr. Sandwich spread: grilled subs, loaded comfort food, chaat and sides — all made fresh to order.</p>
-  <div class="filters">
-    <button class="filter active">All</button><button class="filter">Subs</button><button class="filter">Burgers</button><button class="filter">Chaat</button><button class="filter">Beverages</button>
-  </div>
-  <div class="page-cards">
-    <article class="food-card reveal"><div class="food-img" style="background-image:url('https://images.unsplash.com/photo-1550507992-eb63ffee0847?auto=format&fit=crop&w=1000&q=85')"></div><div class="food-info"><h3>Smoky BBQ Sub</h3><p>Fresh assembly, hot grill, clean finish.</p><div class="price"><span>₹249</span><span class="plus">+</span></div></div></article>
-    <article class="food-card reveal"><div class="food-img" style="background-image:url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1000&q=85')"></div><div class="food-info"><h3>Cheese Blast Burger</h3><p>Big on flavour, loaded with melted cheese.</p><div class="price"><span>₹199</span><span class="plus">+</span></div></div></article>
-    <article class="food-card reveal"><div class="food-img" style="background-image:url('https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=1000&q=85')"></div><div class="food-info"><h3>Crunchy Loaded Fries</h3><p>Recipes and portions designed to stay reliable.</p><div class="price"><span>₹129</span><span class="plus">+</span></div></div></article>
-  </div>
-</div></section>
-
-<!-- PAGE 5 — CHAAT CORNER -->
-<section class="chaat nav-anchor" id="chaat"><div class="container chaat-grid">
-  <div class="reveal-left"><div class="eyebrow" style="color:#ffe4dd">CHAAT CORNER</div><h2>Street food.<br><span>Kitchen standards.</span></h2><p>Peanut and corn chaats made to order, with bright chutneys, spice and crunch — familiar Indian flavours, handled with the same consistency as the grill.</p><a class="btn btn-dark" href="#menu">Order Chaat <span>→</span></a></div>
-  <div class="chaat-art reveal-right"><div class="bowl"></div></div>
-</div></section>
-
-<!-- PAGE 6 — OUR STORY -->
-<section class="story-preview nav-anchor" id="story"><div class="container story-preview-grid"><div class="story-photo reveal-left"><img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1200&q=85" alt="Warm Mr. Sandwich style restaurant interior" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 400 300%27%3E%3Cdefs%3E%3ClinearGradient id=%27g%27 x1=%270%27 y1=%270%27 x2=%271%27 y2=%271%27%3E%3Cstop offset=%270%27 stop-color=%27%23e7dcc2%27/%3E%3Cstop offset=%271%27 stop-color=%27%23c98a49%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%27400%27 height=%27300%27 fill=%27url(%23g)%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-family=%27sans-serif%27 font-size=%2722%27 fill=%27%233a2a12%27 text-anchor=%27middle%27 dominant-baseline=%27middle%27%3EMR. SANDWICH%3C/text%3E%3C/svg%3E'"><span>REAL FOOD<br>REAL PEOPLE<br><em>REAL STORIES</em> ♡</span></div><div class="reveal-right"><div class="eyebrow">OUR STORY</div><h2>A Small Bite.<br><span>A Bigger Purpose.</span></h2><p>Mr. Sandwich started with a simple idea — serve honest, delicious food that brings people together. We started with one rule that never changed: fresh ingredients, standardised recipes and food made to order. Today, we're more than just a sandwich shop, we're a community of food lovers.</p><a class="btn btn-primary" href="#franchise">Our Story <span>→</span></a></div></div></section>
-
-<!-- PAGE 7 — TESTIMONIALS -->
-<section class="testimonials nav-anchor" id="testimonials"><div class="container">
-  <div class="section-head reveal-up"><div><div class="eyebrow" style="color:#dce3bd">LOVED BY THOUSANDS</div><h2>What Our <span>Customers Say</span></h2></div></div>
-  <div class="testi-grid">
-    <div class="testi-card reveal-up"><div class="testi-stars">★★★★★</div><p class="testi-quote"><em>“</em>Best sandwiches in town! Absolutely love the taste and quality every single time.</p><div class="testi-name">Aditi Sharma<small>Mumbai</small></div></div>
-    <div class="testi-card reveal-up"><div class="testi-stars">★★★★★</div><p class="testi-quote"><em>“</em>Fresh, fast and consistent — the BBQ sub is my weekly order without fail.</p><div class="testi-name">Rohan Mehta<small>Pune</small></div></div>
-    <div class="testi-card reveal-up"><div class="testi-stars">★★★★★</div><p class="testi-quote"><em>“</em>The chaat corner is a genius touch. Feels premium but still tastes like home.</p><div class="testi-name">Sana Iyer<small>Bengaluru</small></div></div>
-  </div>
-</div></section>
-
-<!-- PAGE 8 — FRANCHISE -->
-<section class="franchise nav-anchor" id="franchise"><div class="container franchise-inner">
-  <div class="reveal-left"><div class="eyebrow">BUILD THE NEXT MR. SANDWICH</div><h2>Own a <span>Franchise.</span></h2><p class="franchise-copy">A standardised menu, operating playbook and brand-led customer experience designed for partners who want to build a serious food outlet instead of improvising one.</p>
-    <div class="checks">
-      <div class="check"><b>✓</b> Proven, standardised menu &amp; recipes</div>
-      <div class="check"><b>✓</b> Complete training &amp; launch support</div>
-      <div class="check"><b>✓</b> Marketing &amp; brand playbook included</div>
+   </section>
+   <!-- PAGE 4 — MENU -->
+   <section class="page-hero nav-anchor" id="menu">
+    <div class="container reveal-up">
+     <div class="eyebrow" style="color:var(--gold)">
+      THE MENU
+     </div>
+     <h1>
+      Fresh stacks.
+      <br/>
+      Loud flavours.
+     </h1>
     </div>
-    <a class="btn btn-dark" href="#contact">Enquire Now <span>→</span></a>
-  </div>
-  <div></div>
-</div></section>
-
-<!-- PAGE 9 — GALLERY -->
-<section class="gallery nav-anchor" id="gallery"><div class="container">
-  <div class="section-head reveal-up"><div><div class="eyebrow">FROM OUR KITCHEN</div><h2>The <span>Gallery</span></h2></div></div>
-  <div class="gallery-grid">
-    <a href="#menu" class="reveal-zoom"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=80" alt="Burger close up" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 400 300%27%3E%3Cdefs%3E%3ClinearGradient id=%27g%27 x1=%270%27 y1=%270%27 x2=%271%27 y2=%271%27%3E%3Cstop offset=%270%27 stop-color=%27%23e7dcc2%27/%3E%3Cstop offset=%271%27 stop-color=%27%23c98a49%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%27400%27 height=%27300%27 fill=%27url(%23g)%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-family=%27sans-serif%27 font-size=%2722%27 fill=%27%233a2a12%27 text-anchor=%27middle%27 dominant-baseline=%27middle%27%3EMR. SANDWICH%3C/text%3E%3C/svg%3E'"></a>
-    <a class="reveal-zoom" href="#menu"><img src="https://images.unsplash.com/photo-1550507992-eb63ffee0847?auto=format&fit=crop&w=700&q=80" alt="Sub sandwich" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 400 300%27%3E%3Cdefs%3E%3ClinearGradient id=%27g%27 x1=%270%27 y1=%270%27 x2=%271%27 y2=%271%27%3E%3Cstop offset=%270%27 stop-color=%27%23e7dcc2%27/%3E%3Cstop offset=%271%27 stop-color=%27%23c98a49%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%27400%27 height=%27300%27 fill=%27url(%23g)%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-family=%27sans-serif%27 font-size=%2722%27 fill=%27%233a2a12%27 text-anchor=%27middle%27 dominant-baseline=%27middle%27%3EMR. SANDWICH%3C/text%3E%3C/svg%3E'"></a>
-    <a class="reveal-zoom" href="#chaat"><img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=700&q=80" alt="Street style chaat" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 400 300%27%3E%3Cdefs%3E%3ClinearGradient id=%27g%27 x1=%270%27 y1=%270%27 x2=%271%27 y2=%271%27%3E%3Cstop offset=%270%27 stop-color=%27%23e7dcc2%27/%3E%3Cstop offset=%271%27 stop-color=%27%23c98a49%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%27400%27 height=%27300%27 fill=%27url(%23g)%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-family=%27sans-serif%27 font-size=%2722%27 fill=%27%233a2a12%27 text-anchor=%27middle%27 dominant-baseline=%27middle%27%3EMR. SANDWICH%3C/text%3E%3C/svg%3E'"></a>
-    <a class="reveal-zoom" href="#story"><img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=700&q=80" alt="Restaurant interior" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 400 300%27%3E%3Cdefs%3E%3ClinearGradient id=%27g%27 x1=%270%27 y1=%270%27 x2=%271%27 y2=%271%27%3E%3Cstop offset=%270%27 stop-color=%27%23e7dcc2%27/%3E%3Cstop offset=%271%27 stop-color=%27%23c98a49%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%27400%27 height=%27300%27 fill=%27url(%23g)%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-family=%27sans-serif%27 font-size=%2722%27 fill=%27%233a2a12%27 text-anchor=%27middle%27 dominant-baseline=%27middle%27%3EMR. SANDWICH%3C/text%3E%3C/svg%3E'"></a>
-    <a class="reveal-zoom" href="#menu"><img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=700&q=80" alt="Loaded fries" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 400 300%27%3E%3Cdefs%3E%3ClinearGradient id=%27g%27 x1=%270%27 y1=%270%27 x2=%271%27 y2=%271%27%3E%3Cstop offset=%270%27 stop-color=%27%23e7dcc2%27/%3E%3Cstop offset=%271%27 stop-color=%27%23c98a49%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%27400%27 height=%27300%27 fill=%27url(%23g)%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-family=%27sans-serif%27 font-size=%2722%27 fill=%27%233a2a12%27 text-anchor=%27middle%27 dominant-baseline=%27middle%27%3EMR. SANDWICH%3C/text%3E%3C/svg%3E'"></a>
-    <a class="reveal-zoom" href="#menu"><img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=700&q=80" alt="Cold beverage" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 400 300%27%3E%3Cdefs%3E%3ClinearGradient id=%27g%27 x1=%270%27 y1=%270%27 x2=%271%27 y2=%271%27%3E%3Cstop offset=%270%27 stop-color=%27%23e7dcc2%27/%3E%3Cstop offset=%271%27 stop-color=%27%23c98a49%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%27400%27 height=%27300%27 fill=%27url(%23g)%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-family=%27sans-serif%27 font-size=%2722%27 fill=%27%233a2a12%27 text-anchor=%27middle%27 dominant-baseline=%27middle%27%3EMR. SANDWICH%3C/text%3E%3C/svg%3E'"></a>
-  </div>
-</div></section>
-
-<!-- PAGE 10 — LOCATIONS -->
-<section class="page-hero nav-anchor" id="locations"><div class="container reveal-up"><div class="eyebrow" style="color:var(--gold)">FIND / ENQUIRE</div><h1>Come hungry.<br>Leave happy.</h1></div></section>
-<section class="page-copy"><div class="container">
-  <div class="eyebrow">Find a store near you.</div>
-  <div class="section-head"><h2>Our Locations</h2></div>
-  <p>Mr. Sandwich is live across 10+ cities and growing. Here are a few of our busiest corners.</p>
-  <div class="page-cards">
-    <article class="food-card reveal"><div class="food-info"><h3>Andheri West, Mumbai</h3><p>Open 11 AM – 11 PM · Dine-in, takeaway &amp; delivery</p></div></article>
-    <article class="food-card reveal"><div class="food-info"><h3>Koregaon Park, Pune</h3><p>Open 11 AM – 11 PM · Dine-in, takeaway &amp; delivery</p></div></article>
-    <article class="food-card reveal"><div class="food-info"><h3>Indiranagar, Bengaluru</h3><p>Open 11 AM – 11 PM · Dine-in, takeaway &amp; delivery</p></div></article>
-  </div>
-</div></section>
-
-<!-- PAGE 11 — FAQ -->
-<section class="faq nav-anchor" id="faq"><div class="container">
-  <div class="section-head reveal-up"><div><div class="eyebrow">GOOD TO KNOW</div><h2>Frequently Asked <span>Questions</span></h2></div></div>
-  <div class="faq-list">
-    <details class="faq-item reveal-up" open><summary>Is everything made fresh to order?</summary><p>Yes — nothing is pre-made. Every sandwich, burger and chaat plate is assembled and grilled after you order.</p></details>
-    <details class="faq-item reveal-up"><summary>Do you offer franchise opportunities?</summary><p>Yes, we're actively onboarding franchise partners. Head to the Franchise section above or use the contact form below.</p></details>
-    <details class="faq-item reveal-up"><summary>Do you deliver?</summary><p>Most outlets offer dine-in, takeaway and delivery through major partner apps.</p></details>
-    <details class="faq-item reveal-up"><summary>Are preservative-free claims real?</summary><p>We don't use artificial preservatives in our sauces or fillings — ingredients are prepped fresh daily.</p></details>
-  </div>
-</div></section>
-
-<!-- PAGE 12 — CONTACT -->
-<section class="contact nav-anchor" id="contact"><div class="container contact-grid">
-  <div class="reveal-left"><h2>Let's <br>Talk.</h2><p>Use this form for locations, franchise enquiries, partnerships or general questions — we usually reply within a day.</p></div>
-  <form class="form page-form reveal-right" onsubmit="return false">
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <input type="text" placeholder="Subject">
-    <textarea placeholder="Your Message"></textarea>
-    <button class="btn btn-primary" type="submit">Send Enquiry <span>→</span></button>
-  </form>
-</div></section>
-</main>
-<footer class="footer"><div class="container footer-inner"><div><strong>MR. SANDWICH</strong> — More than just a bite.</div><div><a href="#menu">Menu</a> · <a href="#story">Our Story</a> · <a href="#locations">Locations</a> · <a href="#contact">Contact</a></div></div></footer>
-<script>
-(()=>{
- const nav=document.getElementById('nav'), links=document.getElementById('navLinks'), menu=document.getElementById('mobileMenu'), cursor=document.getElementById('cursor'), media=document.getElementById('heroMedia');
- const onScroll=()=>nav.classList.toggle('scrolled',window.scrollY>24); window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
- menu.addEventListener('click',()=>{const open=links.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));});
- links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');menu.setAttribute('aria-expanded','false')}));
- if(matchMedia('(pointer:fine)').matches){window.addEventListener('pointermove',e=>{cursor.style.left=e.clientX+'px';cursor.style.top=e.clientY+'px'; if(media){const r=media.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;media.style.setProperty('--mx',(x*10).toFixed(2)+'px');media.style.setProperty('--my',(y*8).toFixed(2)+'px')}});document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>cursor.classList.add('big'));el.addEventListener('mouseleave',()=>cursor.classList.remove('big'))})}
-
- const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12});
- document.querySelectorAll('.category-card,.story-preview-grid,.stats-bar,.reveal,.whyus-card,.testi-card,.reveal-hero,.reveal-up,.reveal-left,.reveal-right,.reveal-zoom').forEach(x=>io.observe(x));
- ['.category-grid','.whyus-grid','.testi-grid','.gallery-grid','.page-cards','.faq-list'].forEach(sel=>{
-   document.querySelectorAll(sel).forEach(grid=>{
-     [...grid.children].forEach((child,i)=>{child.style.transitionDelay=(i*90)+'ms'});
-   });
- });
- const fallbackBg="linear-gradient(135deg,#e7dcc2,#c98a49)";
- document.querySelectorAll('.food-img[style*="background-image"]').forEach(el=>{
-   const m=el.style.backgroundImage.match(/url\(["']?(.*?)["']?\)/);
+   </section>
+   <section class="page-copy">
+    <div class="container">
+     <div class="eyebrow">
+      Built for the craving.
+     </div>
+     <div class="section-head">
+      <h2>
+       The Full Menu
+      </h2>
+     </div>
+     <p>
+      Explore the full Mr. Sandwich spread: grilled subs, loaded comfort food, chaat and sides &mdash; all made fresh to order.
+     </p>
+     <div class="filters">
+      <button class="filter active">
+       All
+      </button>
+      <button class="filter">
+       Subs
+      </button>
+      <button class="filter">
+       Burgers
+      </button>
+      <button class="filter">
+       Chaat
+      </button>
+      <button class="filter">
+       Beverages
+      </button>
+     </div>
+     <div class="page-cards">
+      <article class="food-card reveal">
+       <div class="food-img" style="background-image:url('https://images.unsplash.com/photo-1550507992-eb63ffee0847?auto=format&amp;fit=crop&amp;w=1000&amp;q=85')">
+       </div>
+       <div class="food-info">
+        <h3>
+         Smoky BBQ Sub
+        </h3>
+        <p>
+         Fresh assembly, hot grill, clean finish.
+        </p>
+        <div class="price">
+         <span>
+          ₹249
+         </span>
+         <span class="plus">
+          +
+         </span>
+        </div>
+       </div>
+      </article>
+      <article class="food-card reveal">
+       <div class="food-img" style="background-image:url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&amp;fit=crop&amp;w=1000&amp;q=85')">
+       </div>
+       <div class="food-info">
+        <h3>
+         Cheese Blast Burger
+        </h3>
+        <p>
+         Big on flavour, loaded with melted cheese.
+        </p>
+        <div class="price">
+         <span>
+          ₹199
+         </span>
+         <span class="plus">
+          +
+         </span>
+        </div>
+       </div>
+      </article>
+      <article class="food-card reveal">
+       <div class="food-img" style="background-image:url('https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&amp;fit=crop&amp;w=1000&amp;q=85')">
+       </div>
+       <div class="food-info">
+        <h3>
+         Crunchy Loaded Fries
+        </h3>
+        <p>
+         Recipes and portions designed to stay reliable.
+        </p>
+        <div class="price">
+         <span>
+          ₹129
+         </span>
+         <span class="plus">
+          +
+         </span>
+        </div>
+       </div>
+      </article>
+     </div>
+    </div>
+   </section>
+   <!-- PAGE 5 — CHAAT CORNER -->
+   <section class="chaat nav-anchor" id="chaat">
+    <div class="container chaat-grid">
+     <div class="reveal-left">
+      <div class="eyebrow" style="color:#ffe4dd">
+       CHAAT CORNER
+      </div>
+      <h2>
+       Street food.
+       <br/>
+       <span>
+        Kitchen standards.
+       </span>
+      </h2>
+      <p>
+       Peanut and corn chaats made to order, with bright chutneys, spice and crunch &mdash; familiar Indian flavours, handled with the same consistency as the grill.
+      </p>
+      <a class="btn btn-dark" href="#menu">
+       Order Chaat
+       <span>
+        &rarr;
+       </span>
+      </a>
+     </div>
+     <div class="chaat-art reveal-right">
+      <div class="bowl">
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- PAGE 6 — OUR STORY -->
+   <section class="story-preview nav-anchor" id="story">
+    <div class="container story-preview-grid">
+     <div class="story-photo reveal-left">
+      <img alt="Warm Mr. Sandwich style restaurant interior" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 400 300%27%3E%3Cdefs%3E%3ClinearGradient id=%27g%27 x1=%270%27 y1=%270%27 x2=%271%27 y2=%271%27%3E%3Cstop offset=%270%27 stop-color=%27%23e7dcc2%27/%3E%3Cstop offset=%271%27 stop-color=%27%23c98a49%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%27400%27 height=%27300%27 fill=%27url(%23g)%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-family=%27sans-serif%27 font-size=%2722%27 fill=%27%233a2a12%27 text-anchor=%27middle%27 dominant-baseline=%27middle%27%3EMR. SANDWICH%3C/text%3E%3C/svg%3E'" src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"/>
+      <span>
+       REAL FOOD
+       <br/>
+       REAL PEOPLE
+       <br/>
+       <em>
+        REAL STORIES
+       </em>
+       ♡
+      </span>
+     </div>
+     <div class="reveal-right">
+      <div class="eyebrow">
+       OUR STORY
+      </div>
+      <h2>
+       A Small Bite.
+       <br/>
+       <span>
+        A Bigger Purpose.
+       </span>
+      </h2>
+      <p>
+       Mr. Sandwich started with a simple idea &mdash; serve honest, delicious food that brings people together. We started with one rule that never changed: fresh ingredients, standardised recipes and food made to order. Today, we're more than just a sandwich shop, we're a community of food lovers.
+      </p>
+      <a class="btn btn-primary" href="#franchise">
+       Our Story
+       <span>
+        &rarr;
+       </span>
+      </a>
+     </div>
+    </div>
+   </section>
+   <!-- PAGE 7 — TESTIMONIALS -->
+   <section class="testimonials nav-anchor" id="testimonials">
+    <div class="container">
+     <div class="section-head reveal-up">
+      <div>
+       <div class="eyebrow" style="color:#dce3bd">
+        LOVED BY THOUSANDS
+       </div>
+       <h2>
+        What Our
+        <span>
+         Customers Say
+        </span>
+       </h2>
+      </div>
+     </div>
+     <div class="testi-grid">
+      <div class="testi-card reveal-up">
+       <div class="testi-stars">
+        &starf;&starf;&starf;&starf;&starf;
+       </div>
+       <p class="testi-quote">
+        <em>
+         &ldquo;
+        </em>
+        Best sandwiches in town! Absolutely love the taste and quality every single time.
+       </p>
+       <div class="testi-name">
+        Aditi Sharma
+        <small>
+         Mumbai
+        </small>
+       </div>
+      </div>
+      <div class="testi-card reveal-up">
+       <div class="testi-stars">
+        &starf;&starf;&starf;&starf;&starf;
+       </div>
+       <p class="testi-quote">
+        <em>
+         &ldquo;
+        </em>
+        Fresh, fast and consistent &mdash; the BBQ sub is my weekly order without fail.
+       </p>
+       <div class="testi-name">
+        Rohan Mehta
+        <small>
+         Pune
+        </small>
+       </div>
+      </div>
+      <div class="testi-card reveal-up">
+       <div class="testi-stars">
+        &starf;&starf;&starf;&starf;&starf;
+       </div>
+       <p class="testi-quote">
+        <em>
+         &ldquo;
+        </em>
+        The chaat corner is a genius touch. Feels premium but still tastes like home.
+       </p>
+       <div class="testi-name">
+        Sana Iyer
+        <small>
+         Bengaluru
+        </small>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- PAGE 8 — FRANCHISE -->
+   <section class="franchise nav-anchor" id="franchise">
+    <div class="container franchise-inner">
+     <div class="reveal-left">
+      <div class="eyebrow">
+       BUILD THE NEXT MR. SANDWICH
+      </div>
+      <h2>
+       Own a
+       <span>
+        Franchise.
+       </span>
+      </h2>
+      <p class="franchise-copy">
+       A standardised menu, operating playbook and brand-led customer experience designed for partners who want to build a serious food outlet instead of improvising one.
+      </p>
+      <div class="checks">
+       <div class="check">
+        <b>
+         &checkmark;
+        </b>
+        Proven, standardised menu &amp; recipes
+       </div>
+       <div class="check">
+        <b>
+         &checkmark;
+        </b>
+        Complete training &amp; launch support
+       </div>
+       <div class="check">
+        <b>
+         &checkmark;
+        </b>
+        Marketing &amp; brand playbook included
+       </div>
+      </div>
+      <a class="btn btn-dark" href="#contact">
+       Enquire Now
+       <span>
+        &rarr;
+       </span>
+      </a>
+     </div>
+     <div>
+     </div>
+    </div>
+   </section>
+   <!-- PAGE 9 — GALLERY -->
+   <section class="gallery nav-anchor" id="gallery">
+    <div class="container">
+     <div class="section-head reveal-up">
+      <div>
+       <div class="eyebrow">
+        FROM OUR KITCHEN
+       </div>
+       <h2>
+        The
+        <span>
+         Gallery
+        </span>
+       </h2>
+      </div>
+     </div>
+     <div class="gallery-grid">
+      <a class="reveal-zoom" href="#menu">
+       <img alt="Burger close up" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 400 300%27%3E%3Cdefs%3E%3ClinearGradient id=%27g%27 x1=%270%27 y1=%270%27 x2=%271%27 y2=%271%27%3E%3Cstop offset=%270%27 stop-color=%27%23e7dcc2%27/%3E%3Cstop offset=%271%27 stop-color=%27%23c98a49%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%27400%27 height=%27300%27 fill=%27url(%23g)%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-family=%27sans-serif%27 font-size=%2722%27 fill=%27%233a2a12%27 text-anchor=%27middle%27 dominant-baseline=%27middle%27%3EMR. SANDWICH%3C/text%3E%3C/svg%3E'" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&amp;fit=crop&amp;w=700&amp;q=80"/>
+      </a>
+      <a class="reveal-zoom" href="#menu">
+       <img alt="Sub sandwich" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 400 300%27%3E%3Cdefs%3E%3ClinearGradient id=%27g%27 x1=%270%27 y1=%270%27 x2=%271%27 y2=%271%27%3E%3Cstop offset=%270%27 stop-color=%27%23e7dcc2%27/%3E%3Cstop offset=%271%27 stop-color=%27%23c98a49%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%27400%27 height=%27300%27 fill=%27url(%23g)%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-family=%27sans-serif%27 font-size=%2722%27 fill=%27%233a2a12%27 text-anchor=%27middle%27 dominant-baseline=%27middle%27%3EMR. SANDWICH%3C/text%3E%3C/svg%3E'" src="https://images.unsplash.com/photo-1550507992-eb63ffee0847?auto=format&amp;fit=crop&amp;w=700&amp;q=80"/>
+      </a>
+      <a class="reveal-zoom" href="#chaat">
+       <img alt="Street style chaat" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 400 300%27%3E%3Cdefs%3E%3ClinearGradient id=%27g%27 x1=%270%27 y1=%270%27 x2=%271%27 y2=%271%27%3E%3Cstop offset=%270%27 stop-color=%27%23e7dcc2%27/%3E%3Cstop offset=%271%27 stop-color=%27%23c98a49%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%27400%27 height=%27300%27 fill=%27url(%23g)%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-family=%27sans-serif%27 font-size=%2722%27 fill=%27%233a2a12%27 text-anchor=%27middle%27 dominant-baseline=%27middle%27%3EMR. SANDWICH%3C/text%3E%3C/svg%3E'" src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&amp;fit=crop&amp;w=700&amp;q=80"/>
+      </a>
+      <a class="reveal-zoom" href="#story">
+       <img alt="Restaurant interior" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 400 300%27%3E%3Cdefs%3E%3ClinearGradient id=%27g%27 x1=%270%27 y1=%270%27 x2=%271%27 y2=%271%27%3E%3Cstop offset=%270%27 stop-color=%27%23e7dcc2%27/%3E%3Cstop offset=%271%27 stop-color=%27%23c98a49%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%27400%27 height=%27300%27 fill=%27url(%23g)%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-family=%27sans-serif%27 font-size=%2722%27 fill=%27%233a2a12%27 text-anchor=%27middle%27 dominant-baseline=%27middle%27%3EMR. SANDWICH%3C/text%3E%3C/svg%3E'" src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&amp;fit=crop&amp;w=700&amp;q=80"/>
+      </a>
+      <a class="reveal-zoom" href="#menu">
+       <img alt="Loaded fries" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 400 300%27%3E%3Cdefs%3E%3ClinearGradient id=%27g%27 x1=%270%27 y1=%270%27 x2=%271%27 y2=%271%27%3E%3Cstop offset=%270%27 stop-color=%27%23e7dcc2%27/%3E%3Cstop offset=%271%27 stop-color=%27%23c98a49%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%27400%27 height=%27300%27 fill=%27url(%23g)%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-family=%27sans-serif%27 font-size=%2722%27 fill=%27%233a2a12%27 text-anchor=%27middle%27 dominant-baseline=%27middle%27%3EMR. SANDWICH%3C/text%3E%3C/svg%3E'" src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&amp;fit=crop&amp;w=700&amp;q=80"/>
+      </a>
+      <a class="reveal-zoom" href="#menu">
+       <img alt="Cold beverage" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 400 300%27%3E%3Cdefs%3E%3ClinearGradient id=%27g%27 x1=%270%27 y1=%270%27 x2=%271%27 y2=%271%27%3E%3Cstop offset=%270%27 stop-color=%27%23e7dcc2%27/%3E%3Cstop offset=%271%27 stop-color=%27%23c98a49%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%27400%27 height=%27300%27 fill=%27url(%23g)%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-family=%27sans-serif%27 font-size=%2722%27 fill=%27%233a2a12%27 text-anchor=%27middle%27 dominant-baseline=%27middle%27%3EMR. SANDWICH%3C/text%3E%3C/svg%3E'" src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&amp;fit=crop&amp;w=700&amp;q=80"/>
+      </a>
+     </div>
+    </div>
+   </section>
+   <!-- PAGE 10 — LOCATIONS -->
+   <section class="page-hero nav-anchor" id="locations">
+    <div class="container reveal-up">
+     <div class="eyebrow" style="color:var(--gold)">
+      FIND / ENQUIRE
+     </div>
+     <h1>
+      Come hungry.
+      <br/>
+      Leave happy.
+     </h1>
+    </div>
+   </section>
+   <section class="page-copy">
+    <div class="container">
+     <div class="eyebrow">
+      Find a store near you.
+     </div>
+     <div class="section-head">
+      <h2>
+       Our Locations
+      </h2>
+     </div>
+     <p>
+      Mr. Sandwich is live across 10+ cities and growing. Here are a few of our busiest corners.
+     </p>
+     <div class="page-cards">
+      <article class="food-card reveal">
+       <div class="food-info">
+        <h3>
+         Andheri West, Mumbai
+        </h3>
+        <p>
+         Open 11 AM &ndash; 11 PM &middot; Dine-in, takeaway &amp; delivery
+        </p>
+       </div>
+      </article>
+      <article class="food-card reveal">
+       <div class="food-info">
+        <h3>
+         Koregaon Park, Pune
+        </h3>
+        <p>
+         Open 11 AM &ndash; 11 PM &middot; Dine-in, takeaway &amp; delivery
+        </p>
+       </div>
+      </article>
+      <article class="food-card reveal">
+       <div class="food-info">
+        <h3>
+         Indiranagar, Bengaluru
+        </h3>
+        <p>
+         Open 11 AM &ndash; 11 PM &middot; Dine-in, takeaway &amp; delivery
+        </p>
+       </div>
+      </article>
+     </div>
+    </div>
+   </section>
+   <!-- PAGE 11 — FAQ -->
+   <section class="faq nav-anchor" id="faq">
+    <div class="container">
+     <div class="section-head reveal-up">
+      <div>
+       <div class="eyebrow">
+        GOOD TO KNOW
+       </div>
+       <h2>
+        Frequently Asked
+        <span>
+         Questions
+        </span>
+       </h2>
+      </div>
+     </div>
+     <div class="faq-list">
+      <details class="faq-item reveal-up" open="">
+       <summary>
+        Is everything made fresh to order?
+       </summary>
+       <p>
+        Yes &mdash; nothing is pre-made. Every sandwich, burger and chaat plate is assembled and grilled after you order.
+       </p>
+      </details>
+      <details class="faq-item reveal-up">
+       <summary>
+        Do you offer franchise opportunities?
+       </summary>
+       <p>
+        Yes, we're actively onboarding franchise partners. Head to the Franchise section above or use the contact form below.
+       </p>
+      </details>
+      <details class="faq-item reveal-up">
+       <summary>
+        Do you deliver?
+       </summary>
+       <p>
+        Most outlets offer dine-in, takeaway and delivery through major partner apps.
+       </p>
+      </details>
+      <details class="faq-item reveal-up">
+       <summary>
+        Are preservative-free claims real?
+       </summary>
+       <p>
+        We don't use artificial preservatives in our sauces or fillings &mdash; ingredients are prepped fresh daily.
+       </p>
+      </details>
+     </div>
+    </div>
+   </section>
+   <!-- PAGE 12 — CONTACT -->
+   <section class="contact nav-anchor" id="contact">
+    <div class="container contact-grid">
+     <div class="reveal-left">
+      <h2>
+       Let's
+       <br/>
+       Talk.
+      </h2>
+      <p>
+       Use this form for locations, franchise enquiries, partnerships or general questions &mdash; we usually reply within a day.
+      </p>
+     </div>
+     <form class="form page-form reveal-right" onsubmit="return false">
+      <input placeholder="Your Name" required="" type="text"/>
+      <input placeholder="Your Email" required="" type="email"/>
+      <input placeholder="Subject" type="text"/>
+      <textarea placeholder="Your Message"></textarea>
+      <button class="btn btn-primary" type="submit">
+       Send Enquiry
+       <span>
+        &rarr;
+       </span>
+      </button>
+     </form>
+    </div>
+   </section>
+  </main>
+  <footer class="footer">
+   <div class="container footer-inner">
+    <div>
+     <strong>
+      MR. SANDWICH
+     </strong>
+     &mdash; More than just a bite.
+    </div>
+    <div>
+     <a href="#menu">
+      Menu
+     </a>
+     &middot;
+     <a href="#story">
+      Our Story
+     </a>
+     &middot;
+     <a href="#locations">
+      Locations
+     </a>
+     &middot;
+     <a href="#contact">
+      Contact
+     </a>
+    </div>
+   </div>
+  </footer>
+  <script>
+   (()=>{
+const nav=document.getElementById('nav'), links=document.getElementById('navLinks'), menu=document.getElementById('mobileMenu'), cursor=document.getElementById('cursor'), media=document.getElementById('heroMedia');
+const onScroll=()=>nav.classList.toggle('scrolled',window.scrollY>24); window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+menu.addEventListener('click',()=>{const open=links.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));});
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');menu.setAttribute('aria-expanded','false')}));
+if(matchMedia('(pointer:fine)').matches){window.addEventListener('pointermove',e=>{cursor.style.left=e.clientX+'px';cursor.style.top=e.clientY+'px'; if(media){const r=media.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;media.style.setProperty('--mx',(x*10).toFixed(2)+'px');media.style.setProperty('--my',(y*8).toFixed(2)+'px')}});document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>cursor.classList.add('big'));el.addEventListener('mouseleave',()=>cursor.classList.remove('big'))})}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.category-card,.story-preview-grid,.stats-bar,.reveal,.whyus-card,.testi-card,.reveal-hero,.reveal-up,.reveal-left,.reveal-right,.reveal-zoom').forEach(x=>io.observe(x));
+['.category-grid','.whyus-grid','.testi-grid','.gallery-grid','.page-cards','.faq-list'].forEach(sel=>{
+document.querySelectorAll(sel).forEach(grid=>{
+[...grid.children].forEach((child,i)=>{child.style.transitionDelay=(i*90)+'ms'});
+});
+});
+const fallbackBg="linear-gradient(135deg,#e7dcc2,#c98a49)";
+document.querySelectorAll('.food-img[style*="background-image"]').forEach(el=>{
+const m=el.style.backgroundImage.match(/url\(["']?(.*?)["']?\)/);
    if(!m)return; const test=new Image();
    test.onerror=()=>{el.style.backgroundImage=fallbackBg};
    test.src=m[1];
  });
 })();
-</script>
-</body></html>
+  </script>
+ </body>
+</html>
+
