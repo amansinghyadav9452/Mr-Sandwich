@@ -1501,7 +1501,7 @@ body:before {
   position:relative;
   z-index:6;
   margin:0 0 -34px;
-  transform: translateY(-40px);
+  transform: translateY(-34px);
   padding:23px 34px;
   background:var(--olive);
   color:white;
