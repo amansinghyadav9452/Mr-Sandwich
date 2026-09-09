@@ -3795,3 +3795,19 @@ main {
     margin-top: 18px;
   }
 }
+
+/* ===== MATCH HERO WITH THIN HEADER ===== */
+.nav {
+  padding: 8px 0 !important;
+}
+
+.nav-inner {
+  min-height: 44px !important;
+  height: 44px !important;
+}
+
+.home-page .hero-wrap {
+  padding-top: 60px !important;
+}
+
+
